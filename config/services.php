@@ -35,4 +35,11 @@ return [
         ],
     ],
 
+    'quote_api' => [
+    'mock' => env('QUOTE_API_MOCK', false),
+    'mock_200_chance' => env('QUOTE_MOCK_200_CHANCE', 70),
+    'mock_404_chance' => env('QUOTE_MOCK_404_CHANCE', 15),
+    'mock_500_chance' => env('QUOTE_MOCK_500_CHANCE', 15),
+    ],
+
 ];
