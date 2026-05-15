@@ -7,7 +7,7 @@ use App\Services\QuoteService;
 
 class DashboardController extends Controller
 {
-
+    // Fetch all users and attach quote data
     public function index(QuoteService $quoteService)
     {
         $users = User::all();

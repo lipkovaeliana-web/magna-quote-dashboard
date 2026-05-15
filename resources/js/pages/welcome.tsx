@@ -1,4 +1,4 @@
-import { Head } from '@inertiajs/react';
+
 import { useEffect, useState } from 'react';
 
 export default function Welcome() {
@@ -23,6 +23,7 @@ export default function Welcome() {
             fontSize: "18px",
             fontWeight: 600,
         }}>
+            {/* Fetch dashboard data from Laravel API */}
             Dashboard
         </header>
 
@@ -32,6 +33,7 @@ export default function Welcome() {
             gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
             gap: "24px",
         }}>
+            {/* Render user cards */}
             {users.map((item) => (
                 <div key={item.user.id} style={{
                     background: "white",
@@ -94,6 +96,7 @@ export default function Welcome() {
                         — {item.quote.author}
                     </p>
 
+                    {/* Display API errors without crashing UI */}
                     {item.quote.error && (
                         <p style={{ color: "#dc2626", fontWeight: 600 }}>
                             Error: {item.quote.error}
